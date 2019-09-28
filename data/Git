@@ -1,0 +1,19 @@
+
+<p>
+<strong># git 명령어 - 버전 만들기</strong> <br>
+<pre>1. git 저장소 생성
+- git init
+2. git 저장 상태 보기
+- git status
+3. git에 파일 추가/수정
+- git add <file>
+4. 내 꺼임을 알려주기
+- git config --global user.name <username>
+- git config --global user.email <email>
+5. git 에 commit하기
+- git commit
+6. log(history) 보기
+- git log (-p)
+- git dif <commit message id>..<commit message id> -> 각각의 commit 소스코드 사이의 차이점 보여줌
+- git diff -> 버전을 바꾸기 전에 버전을 지금 바꿀 시 바뀔 내용을 보여줌</pre>
+</p>
