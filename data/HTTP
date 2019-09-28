@@ -1,0 +1,40 @@
+
+<p>
+<strong># 2강 request message format</strong> <br>
+<pre>GET /1.html  HTTP/1.1 -> Request line
+Host: ~~~
+~~~~~~
+~~~~~~~~              => Request Headers</pre>
+</p>
+<p>
+<strong># 3강 response message format</strong> <br>
+<pre>status		l version , status code , pharse
+headers		l header file name , value
+blank line	l
+body		l html code
+
+@ status code
+-1xx: informational responses
+-2xx: success
+-3xx: redirection
+-4xx: client errors
+-5xx: server errors</pre>
+</p><br>
+<h2> HTTP Cache</h1> <br>
+
+<p>
+<strong># 1~4강 maxAge와 ETag</strong> <br>
+<pre>Cache 이용 시 도구
+1. max-age(꼭 사용!)
+max-age 가 0이 아닐 때 파일이 변경된 경우 바로 업로드됨
+2. ETag
+last-modified가 부정확할 수도 있음(초단위) -> 도움줌
+Etag를 file과 함께 cache로 저장
+-> 이후 web server에 요청 시 기존 cache의 ETag 값과 server에서 보낸 ETag 값 비교
+- 다르면 수정됨 -> 새로 업로드
+- 같으면 cache 그대로 사용</pre>
+</p>
+<p>
+<strong># 6강 캐쉬정책</strong> <br>
+<pre>의사 결정 트리</pre><img src="../imgs/cache.jpg" width="60%">
+</p>

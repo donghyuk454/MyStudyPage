@@ -1,0 +1,35 @@
+
+<p>
+<strong># Ajax를 쓰는 이유</strong> <br>
+<pre>서칭을 하는 경우 어떻게 검색창에 input이 달라질 때 마다 필요한 정보를 뽑아서 추천 검색어를 보여주는가?
+-> Ajax!!
+
+변경되는 부분에만 집중할 수 있다!!
+이를 통해 Single Page Application을 구현할 수 있다.</pre>
+</p>
+<p>
+<strong># 3~5강 fetch API에 대하여</strong> <br>
+<pre>기본 코드
+fetch('../page/HTML').then(function(res){//여기서 res 는 '~'에 대한 response
+	res.text().then(function(text){
+		document.querySelector('article').innerHTML = text;
+	})
+});
+
+여기서 then은 asynchronous
+
+</pre>
+</p>
+
+<p>
+<strong># 7~8강 hash 이용 + a</strong> <br>
+<pre>1. hash 이용
+id에 값 부여 -> hash 생성
+hash로 북마크 기능
+=> 링크 구현 가능
+ex) herf="#hash"
+
+2. 개발 시 유의할 점
+데이터와 로직을 구분할 것!
+데이터가 바뀌었을 때 데이터만 수정하면 되게 만들것!!!</pre>
+</p>

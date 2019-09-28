@@ -1,0 +1,78 @@
+
+<p>
+<strong># 1~8강 라우팅</strong> <br>
+<pre>get 방식 app.get('주소', function(req, res){~~});
+post 방식: app.post('주소', function(req,res){~~});
+
+주소를 값에 따라 바뀌게 처리하는 법
+URI 주소 -> /page/:pageId
+코드 내 주소값 -> request.params.pageId</pre>
+</p>
+<p>
+<strong># 9~11강 미들웨어</strong> <br>
+<pre>@@남이 만든 미들웨어 사용하기
+1. npm install ~~ --save
+2. 코드 내에
+var ~~ = require('~~');
+app.use(~~);
+
+ex) body-parser, compression, ...
+
+@@내 미들웨어 만들기
+app.use(function(req, res, next){
+	~~
+	next()
+})
+app.get('~', func~~)
+app.post('~'. fun~~)  => 결국 다 미들웨어!!
+
+실행순서
+app.use(function(req, res, next){//1
+	~~
+	next()
+}, function(req, res, next){//2
+	~~~
+	next()
+})</pre>
+</p>
+<p>
+<strong># 12강 정적인 파일의 서비스</strong> <br>
+<pre>기존 -> 라우팅으로 파일 찾게함
+
+but by using midleware...
+app.use(express.static('public'));
+-> 정적인 파일 접근시 public 이라는 폴더로 접근!!  ==> 라우팅이 필요 없게 함(여기서 라우팅이 끝난 셈)</pre>
+</p>
+<p>
+<strong># 13강 에러 처리</strong> <br>
+<pre>404 응답 처리
+~~~~~~~
+//마지막
+app.use(function(req, res, next){//페이지가 없는 경우
+	res.status(404).send(~~~~);
+})
+
+app.use(function(err, req, res, next){//에러를 핸들링 하기 위한 미들웨어
+	res.status(404).send(~~~~);
+})</pre>
+</p>
+<p>
+<strong># 14강 route 를 file로 분리해서 저장</strong> <br>
+<pre>route folder에 index.js(route를 담을) 생성
+-> 거기에 route 저장
+-> module로 export
+-> main.js 에서 middleware로 사용</pre>
+</p>
+<p>
+<strong># 15 강 보안 + a</strong> <br>
+<pre>1. express 최신버전 유지 할 것
+2. use TLS(https 쓸 것)
+3. use Helmet(npm install helmet --save)
+4. 쿠키를 안전하게 사용해라
+5. dependencies를 안전하게 해라(use nsp)
+
++ express-generator 사용할 것!!
+
++ template engine
++ Middleware를 잘 활용할 것!!</pre>
+</p>

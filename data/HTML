@@ -1,0 +1,60 @@
+<p style="margin-top:40px;">
+<strong># 6강 내용</strong> <br>
+<pre>1. strong
+강조 기능을 합니다.
+ex) </pre><strong>이동혁</strong><pre>
+2. u
+밑줄 기능을 합니다.
+ex) </pre><u>이동혁</u>
+</p>
+
+<p style="margin-top:40px;">
+<strong># 7강 내용</strong> <br>
+<pre>1. h1~h6
+headline(제목)의 기능을 합니다</pre>
+</p>
+
+<p style="margin-top:40px;">
+<strong># 9강 내용</strong> <br>
+<pre>1. br 테그
+줄띄기 기능을 합니다.
+ex) </pre><br>이<br>동<br>혁<br><br>
+<pre>2. p 테그
+한 단락을 의미합니다.
+ex) </pre><p>단락1</p> <p>단락2</p>
+</p>
+
+<p style="margin-top:40px;">
+<strong># 11강 내용</strong> <br>
+<pre>1. img 테그
+이미지를 불러옵니다.
+속성 - src: 이미지 주소 - width: 크기
+ex) </pre><br><img src="../imgs/coding.jpg" width="50%">
+</p>
+
+<p style="margin-top:40px;">
+<strong># 13강 내용</strong> <br>
+<pre>1. li, ul, ol
+목차를 만들어줍니다.
+parent) - ul: unordered list, - ol: ordered list
+child) - li: list item
+ex)
+# ol과 li</pre>
+<ol class="border_none">
+<li>one</li>
+<li>two</li>
+</ol>
+<pre> # ul과 li</pre>
+<ul>
+<li>one</li>
+<li>two</li>
+</ul>
+</p>
+
+<p style="margin-top:40px;">
+<strong># 14강 내용</strong> <br>
+<pre>1. a 테그
+링크를 불러옵니다.
+ex) </pre><a href="https://www.naver.com/">네이버link입니다.</a>
+</p>
+</div>

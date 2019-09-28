@@ -1,0 +1,39 @@
+
+<p>
+<strong># 1강 OAuth란 무엇인가?</strong> <br>
+<pre>구글, 페이스북, 카카오 등의 계정 정보를 직접 가지고 있지 않고 accessToken를 얻어 사용자가 접근할 때마다 계정 정보에 접근하는 방법</pre>
+</p>
+<p>
+<strong># 2강 용어 정리</strong> <br>
+<pre>   User(사용자) Mine(my service) Their(구글)
+       l            l                 l
+Resource Owner    client        Resource Owner
+
+</pre>
+</p>
+<p>
+<strong># 3강 1단계 register</strong> <br>
+<pre>Client가 Resource server에 등록
+ex) 정보 예시
+Client(app) ID: 1(보여줘도 됨)
+Client(app) Secret: 2(보여주면 안됨)
+Authorized redirect URIs: http://~~.com</pre>
+</p>
+<p>
+<strong># 4~5강 2단계 인증과 승인</strong> <br>
+<pre>1. Resource Owner의 승인
+-> api 접근에 대한 권한 획득!
+ex) user id, scope(api)
+2. Resource Server의 승인
+-> by authorization code(AC, 임시 비밀번호)
+과정)
+RS(Resource server)가 AC 발급 -> RO가 AC 받음 -> RO가 C에게 AC 전송
+-> C가 RS에게 여태 받은 정보(firebase 경우 key file + device token + AC?) 전달
+-> RS가 C에게 access token 발급</pre>
+</p>
+<p>
+<strong># 6~8강 3단계 Access Token과 API 호출, refresh token</strong> <br>
+<pre>AC를 제거한 뒤 Access Token 발급 -> Client가 token 정보 저장
+-> 이를 활용해 API 사용
+refresh token: 유효기간이 있는 access token을 재발급 받는 방법</pre>
+</p>

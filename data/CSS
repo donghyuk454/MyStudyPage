@@ -1,0 +1,55 @@
+<p>
+<strong># 3강 내용</strong> <br>
+<pre>
+1. 기본
+style태그 안에 작성(어디서 부터 어디까지가 CSS인가)
+ex) color:black;
+</pre>
+</p>
+
+<p>
+<strong># 4강 내용</strong> <br>
+<pre>1. style태그(in html)
+style를 개별적으로 작성하고 싶은 경우
+ex) style="color:black"</pre>
+</p>
+
+<p>
+<strong># 7강 내용</strong> <br>
+<pre>1. class속성
+그룹으로 묶고 싶은 경우<br>.class{}로 CSS작성
+ex) class="" -> .클래스{css코드}
+2. id속성
+그룹으로 묶고 싶은 경우<br>#id{}로 CSS작성
+ex) id="" -> #아이디{css코드}</pre>
+</p>
+
+<p>
+<strong># 8~9강 내용</strong> <br>
+<pre>1. box model
+block 단위로 작성할 것인가(block level element), inline 단위로 작성할 것인가 결정(inline element)
+
+ex) div -> block, span -> inline</pre>
+</p>
+
+<p>
+<strong># 10~11강 내용</strong> <br>
+<pre>1. grid
+block 단위에서
+
+ex) style="color:black"
+2. id속성
+그룹으로 묶고 싶은 경우<br>#id{}로 CSS작성
+ex) style="color:black"</pre>
+</p>
+
+<p>
+<strong># 12~14강 내용</strong> <br>
+<pre>1. 미디어 쿼리
+특정 조건을 추가하고 싶은 경우
+반응형 디자인을 할 경우 사용
+@media (조건문){css코드}으로 사용
+2. link 태그
+css코드가 중복될 경우 head 태그에서 사용
+css코드는 별개로 style.css코드에 작성</pre>
+</p>
