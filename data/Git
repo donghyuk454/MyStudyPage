@@ -23,3 +23,26 @@
 - 원래: git add <> -> git commit
 => git commit -a</pre>
 </p>
+
+<p>
+<strong># Branch</strong> <br>
+<pre>0. branch 쓰는 이유
+버전을 client용, dev용 등으로 쪼개서 관리해야 할 경우 사용
+1. branch 만들기
+- git branch => 기본 branch(master)
+- git branch ~~
+2. branch 이동
+- git checkout ~~
+3. git log option
+- git log --branches --decorate --graph (--oneline)
+- git log (-p) A..B => A에는 없고 B에는 있는 것 볼 수 있음
+- git diff A..B => 차이점 비교할 경우
+3. branch 병합하는 방법(merge)
+- git checkout B
+- git merge A
+A -> B 로 병합하기
+4. 작업 중 상태 감춰놓기, 저장(stash)
+- git stash(숨김) -> chectout...작업... -> git stash apply(돌아옴)
+- git stash drop (stash 삭제)
+- git stash pop (stash apply -> drop)</pre>
+</p>
