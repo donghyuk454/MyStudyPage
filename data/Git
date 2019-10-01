@@ -15,5 +15,11 @@
 6. log(history) 보기
 - git log (-p)
 - git dif <commit message id>..<commit message id> -> 각각의 commit 소스코드 사이의 차이점 보여줌
-- git diff -> 버전을 바꾸기 전에 버전을 지금 바꿀 시 바뀔 내용을 보여줌</pre>
+- git diff -> 버전을 바꾸기 전에 버전을 지금 바꿀 시 바뀔 내용을 보여줌
+7. git 이전으로 돌아가는 법(공유하기 전)
+- git reset <log id> --hard 	-> 이전 버전으로 돌아가는 법, 위험한 방법
+- git revert			-> 이전 버전을 새로운 버전으로 만드는 법
+8. 수정한 내용들을 commit 하는법
+- 원래: git add <> -> git commit
+=> git commit -a</pre>
 </p>
