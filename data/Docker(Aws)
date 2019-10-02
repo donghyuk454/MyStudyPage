@@ -153,3 +153,12 @@ RUN apt-get install -y php5.6-mysql
 ?>
 </pre>
 </p>
+
+<p>
+<strong># RDS 연동</strong> <br>
+<pre>1. 파라미터 그룹 만들기(한글 설정)
+mysql 5.6 -> 파라미터 그룹 편집 -> utf-8로 변경(char, collation)
+
+2. RDS 만들기
+-> DB 파라미터 그룹으로 만든 것 사용하기 </pre>
+</p>

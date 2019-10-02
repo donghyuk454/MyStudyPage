@@ -31,3 +31,18 @@ button -> <input type="button" value="example" onclick="Test();"></pre>
 <pre>1. script 관리
 script 태그의 src="~~" 추가</pre>
 </p>
+
+<p>
+<strong># 비동기화를 동기화로! + replace 함수</strong> <br>
+<pre>@샘플 코드
+function submit(){
+  setTimeout(function(){
+    document.getElementById('form').submit();
+  }, 500);
+}
+async function change(){
+  document.getElementById('desc').value = document.getElementById('desc').value.replace(/&lt;/gi, '&lt;');
+
+  await submit();
+}</pre>
+</p>
