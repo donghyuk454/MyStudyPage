@@ -7,14 +7,67 @@ var bodyParser = require('body-parser');
 var compression = require('compression');
 var topicRouter = require('./routes/topic');
 var indexRouter = require('./routes/index');
+var loginRouter = require('./routes/login');
 
 var app = express();
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: false }));//미들웨어를 표현하는 표현식
-app.use(compression());//미들웨
+app.use(compression());//미들웨어
 
-app.use('/', indexRouter);
+app.use('/login', loginRouter);
+
+app.post('/login_process', function(request, response){
+  console.log("login attempt!");
+  var post = request.body;
+  /*request.on('data', function(data){
+    body = body + data;
+    console.log(data);
+  });*/
+  console.log(post);
+
+  if(post.email === 'donghyuk454@gmail.com' && post.password === 'ehdgur12')
+  {
+    response.writeHead(302, {
+      'Set-Cookie': [
+        'email='+post.email,
+        'password='+post.password,
+        'nickname=dongdong'
+      ],
+      'Location': '/'
+    });
+    response.end();
+  }
+  else {
+    response.end('who are you?');
+  }
+})
+
+app.get('/logout_process', function(request, response){
+  console.log("logout attempt!");
+  var post = request.body;
+  /*request.on('data', function(data){
+    body = body + data;
+    console.log(data);
+  });*/
+  console.log(post);
+
+  var date = new Date();
+
+  date.setDate(date.getDate() - 1);
+
+  response.writeHead(302, {
+    'Set-Cookie': [
+      'email='+post.email,
+      'password='+post.password,
+      'nickname=dongdong',
+      'expires=' + date.toUTCString()
+    ],
+    'Location': '/'
+  });
+  response.end();
+})
+
 //PostPage Routing
 app.post('/post', function(request, response){
   if (request.method === 'POST') {
@@ -81,6 +134,7 @@ app.get('/ajaxtest', function(req, res){
 })
 
 app.use('/page', topicRouter);
+app.use('/', indexRouter);
 
 app.use(function(req, res, next){
 	res.status(404).send('404 없는 페이지 입니다!');

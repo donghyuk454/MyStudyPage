@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WEB2 - CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript">
+  </script>
+</head>
+<body>
+  <h1><a  id="title_" href="index.html">커등병 공부 페이지</a></h1>
+  <div id="grid">
+    <ol>
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+      <li><a href="4.html">Node.js</a></li>
+    </ol>
+
+    <div id="article">
+      <h2>CSS</h2>
+
+      <p>
+        <strong># 3강 내용</strong> <br>
+        1. 기본<br>
+        style태그 안에 작성(어디서 부터 어디까지가 CSS인가)<br>
+        ex) color:black;<br>
+      </p>
+
+      <p>
+        <strong># 4강 내용</strong> <br>
+        1. style태그(in html)<br>
+        style를 개별적으로 작성하고 싶은 경우<br>
+        ex) style="color:black"<br>
+      </p>
+
+      <p>
+        <strong># 7강 내용</strong> <br>
+        1. class속성<br>
+        그룹으로 묶고 싶은 경우<br>.class{}로 CSS작성<br>
+        ex) class="" -> .클래스{css코드} <br>
+        2. id속성<br>
+        그룹으로 묶고 싶은 경우<br>#id{}로 CSS작성<br>
+        ex) id="" -> #아이디{css코드}<br>
+      </p>
+
+      <p>
+        <strong># 8~9강 내용</strong> <br>
+        1. box model<br>
+        block 단위로 작성할 것인가(block level element), inline 단위로 작성할 것인가 결정(inline element)<br>
+        <br>
+        ex) div -> block, span -> inline<br>
+      </p>
+
+      <p>
+        <strong># 10~11강 내용</strong> <br>
+        1. grid<br>
+        block 단위에서 <br>
+        <br>
+        ex) style="color:black"<br>
+        2. id속성<br>
+        그룹으로 묶고 싶은 경우<br>#id{}로 CSS작성<br>
+        ex) style="color:black"<br>
+      </p>
+
+      <p>
+        <strong># 12~14강 내용</strong> <br>
+        1. 미디어 쿼리<br>
+        특정 조건을 추가하고 싶은 경우<br>
+        반응형 디자인을 할 경우 사용<br>
+        @media (조건문){css코드}으로 사용<br>
+        2. link 태그<br>
+        css코드가 중복될 경우 head 태그에서 사용<br>
+        css코드는 별개로 style.css코드에 작성<br>
+      </p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $('body').css('color', 'yellow');
+    $('body').css('backgroundColor', 'black');
+  </script>
+</body>
+</html>

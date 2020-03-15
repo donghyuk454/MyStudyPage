@@ -162,3 +162,10 @@ mysql 5.6 -> 파라미터 그룹 편집 -> utf-8로 변경(char, collation)
 2. RDS 만들기
 -> DB 파라미터 그룹으로 만든 것 사용하기 </pre>
 </p>
+<p>
+<strong># + a</strong> <br>
+<pre>1. dockerhub
+- github와 비슷한 것. dockerhub와 github 연동
+2. Jenkins
+- docker 배포 자동화 tool</pre>
+</p>

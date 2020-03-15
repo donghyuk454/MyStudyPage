@@ -1,0 +1,53 @@
+
+<p>
+<strong># Router</strong> <br>
+<pre>@ 쓰는 이유
+각각에 회선을 연결하는건 ip(IPv4) 주소 낭비
+ 
+@ 원리
+공유기에만 회선 연결 -> 공유기에 연결된 디바이스에 private IP address 부여
+-> 공유기로 접근!
+
+@ Network
+LAN(Local Area Network): 지역 네트워크
+WAN(Wide Area Network): 광역네트워크
+
+@ IP address
+public IP address: 공용 IP 주소
+private IP address: 사설 IP 주소</pre>
+</p>
+<p>
+<strong># NAT(Network Address Translation)</strong> <br>
+<pre>@ 하는 일
+- 요청을 보낼 때 -
+private IP address의 요청임을 기록
+private IP address 를 public IP address로 치환 -> router에서 전송
+
+- 응답을 받을 때 -
+응답 내용을 router에서 수신 -> 기록된 private IP address로 응답 내용 전달</pre>
+</p>
+<p>
+<strong># Port, Port Forwarding</strong> <br>
+<pre>@ Well-known port
+0~1023 => Well-known port(22-SSH, 80-http)
+
+@ Port Forwarding
+public IP address의 특정 port로 접근하면 private IP address로 접근하게 하는 것
+외부 ip(router ip)의 외부 포트(8081)로 접근 -> 내부 ip(private ip)의 내부 포트(90)로 연결</pre>
+</p>
+<p>
+<strong># Dynamic vs Static IP Address</strong> <br>
+<pre>@ Dynamic IP Address
+ip 주소가 동적으로 바뀜(ISP가 잘 안쓰는 ip 회수)
+단점: 내가 특정 ip 주소로 접근할 때, 다른 서버로 들어가질 수 있음
+
+- Static IP Address는 통신사에게 돈을 더 내면 받을 수 있음</pre>
+</p>
+<p>
+<strong># DHCP(Dynamic Host Configuration Protocol)</strong> <br>
+<pre>DHCP Client가 DHCP Server에게 ip 주소 요청 ->
+DHCP Server가 DHCP Client에게 사용 가능한 ip 주소 응답 ->
+DHCP Client가 DHCP Server에게 사용할 지 안할 지 결정 후 요청 ->
+DHCP Server가 DHCP Client에게 ip 대여 시간과 사용할 것을 응답 ->
+DHCP Client가 ip 정보를 기록</pre>
+</p>
