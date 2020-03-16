@@ -1,0 +1,40 @@
+
+<p>
+<strong># 세션에 관하여</strong> <br>
+<pre>@ 세션을 쓰는 이유
+쿠키가 유출되거나 조작될 수 있음 -> 보안에서 문제!
+
+@ Session
+사용자의 정보는 Sessions 라는 디렉토리(서버)에 저장됨
+쿠키로는 사용자를 식별하는 식별자만 저장
+
+@ 사용하는 Resources(midleware)
+(npm install -s )express-session
+session()이라는 함수로 사용
+
+@ 세션 옵션
+secret: '~~',		-> 아무도 알면 안됨! 나중에 파일로 변수처리 할 것
+resave: false,		-> 내용이 안바뀌어도 세션 저장소의 값을 저장할 것인가?
+saveUninitialized: true	-> 세션이 필요하기 전까지 세션을 구동하지 않을 것인가?
+
+@ 새로 고침 횟수 코드
+if(req.session.num === undefined) {
+  req.session.num = 1;
+} else {
+  req.session.num += 1;
+}</pre>
+</p>
+<p>
+<strong># 세션 파일에 저장</strong> <br>
+<pre>@ 필요 Resource
+(npm install -s) session-file-store
+
+@ Usage
+var session = require('express-session');
+var FileStore = require('session-file-store')(session);
+
+app.use(session({
+  store: new FileStore(options),//options은 필수 X
+  secret: 'keyboard cat'
+}));</pre>
+</p>
